@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Reading Log</h1>
+    <!-- genre/book list/input types -->
+    <div>
+        <select id="genreInput">
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+        </select>
+        <input type="text" id="bookInput" list="bookList" placeholder="Type a book title">
+        <datalist id="bookList">
+            <option value="Harry Potter and the Sorcerer's Stone"></option>
+            <option value="Harry Potter and the Chamber of Secrets"></option>
+            <option value="The Great Gatsby"></option>
+            <option value="1984"></option>
+            <option value="To Kill a Mockingbird"></option>
+            <option value="Pride and Prejudice"></option>
+            <option value="The Catcher in the Rye"></option>
+            <option value="The Hobbit"></option>
+            <option value="The Lord of the Rings"></option>
+            <option value="Moby Dick"></option>
+            <option value="War and Peace"></option>
+            <option value="Crime and Punishment"></option>
+            <option value="Brave New World"></option>
+            <option value="The Chronicles of Narnia"></option>
+            <option value="The Da Vinci Code"></option>
+        </datalist>
+        <input type="text" id="seriesInput" placeholder="Series (Optional)">
+        <input type="number" id="pageInput" placeholder="Pages" min="1">
+        <input type="number" id="ratingInput" min="1" max="5" placeholder="Rating">
+        <input type="checkbox" id="completedInput"> Completed
+        <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <h2>Books Grouped by Genre</h2>
+    <div id="genreGroups"></div>
+
+    <h2>Books Grouped by Series</h2>
+    <div id="bookGroups"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
